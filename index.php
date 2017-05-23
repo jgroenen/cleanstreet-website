@@ -14,10 +14,6 @@
                 color: #FFFFFF;
                 font-family: "Open Sans";
             }
-            header .cleanstreet-logo {
-                margin-left: auto;
-                margin-right: auto;
-            }
             header {
                 text-align: center;
             }
@@ -64,6 +60,8 @@
                 width: 230px;
                 margin: 40px;
                 line-height: 1.2em;
+                margin-left: auto;
+                margin-right: auto;
             }
             .cleanstreet-logo .merk {
                 background-color: #112D5C;
@@ -90,20 +88,66 @@
                 /*void*/
             }
         </style>
+        <style>
+            .cleanstreet-logo-soap {
+                font-family: Oswald;
+                font-weight: 900;
+                font-size: 2.4em;
+                text-transform: uppercase;
+                text-align: center;
+                width: 230px;
+                margin: 40px;
+                line-height: 1.2em;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #6d1d66;
+                border-radius: 10px;
+                position: relative;
+            }
+            .cleanstreet-logo-soap .merk {
+                background-color: #d02ac9;
+                color: #6d1d66;
+                height: 2.5em;
+                line-height: 2.5em;
+                border-radius: 10px;
+                border: 4px solid #ff61f8;
+            }
+            .cleanstreet-logo-soap .merk span {
+                color: #FFFFFF;
+            }
+            .cleanstreet-logo-soap .locatie {
+                color: #e82fe0;
+                font-size: 0.75em;
+            }
+            .cleanstreet-logo-soap .bubble {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+                border: 2px solid white;
+            }
+        </style>
     </head>
     <body>
-<?php include('banner.html'); ?>
+        <?php include('banner.html'); ?>
         <header>
-            <h1>Samen houden we de <span style="color: #ADEA33">Damstraat</span> schoon</h1>
-            <div class="cleanstreet-logo">
+            <h1>Samen houden we<br><span style="color: #ADEA33">Amsterdam</span> schoon</h1>
+            <div class="cleanstreet-logo-soap">
                 <div class="merk"><span>Clean</span> Street</div>
-                <div class="locatie">Damstraat</div>
+                <div class="locatie locatie-flipper">Damstraat</div>
+                <div class="bubbles"></div>
             </div>
         </header>
         <main>
             <section>
                 <p>Het is druk in Amsterdam. Het toegenomen toerisme zorgt voor meer vuilnis in de straten. Vooral op plaatsen waar op straat wordt gegeten en gedronken. In die straten is er extra inspanning nodig om het schoon te houden. En dat gaan we dus doen!</p>
-                <p>De Gemeente Amsterdam wil dat iedereen zijn verantwoordelijkheid neemt: gemeente, bewoners, bezoekers en ondernemers. Wij denken dat goed voorbeeld doet volgen. Daarom beginnen wij, en vragen we u, als Amsterdamse ondernemer, mee te helpen.</p>
+                <div class="cleanstreet-logo">
+                    <div class="merk"><span>Clean</span> Street</div>
+                    <div class="locatie locatie-flipper">Damstraat</div>
+                </div>
+                <p>De Gemeente Amsterdam wil dat iedereen zijn verantwoordelijkheid neemt: gemeente, bewoners, bezoekers en ondernemers. Wij denken dat goed voorbeeld doet volgen. Daarom zetten wij de eerste stap. En we vragen u als Amsterdamse ondernemer om ons daarbij te helpen.</p>
             </section>
             <section>
                 <h1>Dit gaan wij doen</h1>
@@ -135,5 +179,48 @@
             <?php include('meerinfo.html'); ?>
         </main>
         <?php include('banner.html'); ?>
+        <script>
+            (function () {
+                /*
+                 * Flip straatnamen in alle elementen met class locatie-flipper.
+                 */
+                var i = 0;
+                var straatnamen = [
+                    'Damstraat',
+                    'Oude Doelen',
+                    'Nieuwe Hoog',
+                    'Oude Hoog',
+                    'Damrak',
+                    'Nieuwe Dijk'
+                ];
+                setInterval(function () {
+                    ++i;
+                    var els = document.getElementsByClassName('locatie-flipper');
+                    for (var it = 0; it < els.length; ++it) {
+                        els[it].innerHTML = straatnamen[i % straatnamen.length];
+                    };
+                }, 1500);
+            })();
+            (function () {
+                /*
+                 * Paar bubbles toevoegen aan het soap logo.
+                 */
+                 var els = document.getElementsByClassName('bubbles');
+                 for (var i = 0; i < 10; ++i) {
+                     var bubble = document.createElement('div');
+                     bubble.className = 'bubble';
+                     bubble.style.top = Math.floor(Math.random() * 20) + "px";
+                     bubble.style.left = Math.floor(Math.random() * 20) + "px";
+                     var radius = Math.floor(Math.random() * 30) + "px"
+                     bubble.style.width = radius;
+                     bubble.style.height = radius;
+                     bubble.style.borderRadius = radius;
+                     console.log(Math.random());
+                     for (var it = 0; it < els.length; ++it) {
+                         els[it].appendChild(bubble);
+                     }
+                 }
+            })();
+        </script>
     </body>
 </html>
