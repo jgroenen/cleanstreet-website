@@ -1,0 +1,60 @@
+<style>
+    .cleanstreet-logo {
+        font-family: Oswald;
+        font-weight: 900;
+        font-size: 2.4em;
+        text-transform: uppercase;
+        text-align: center;
+        width: 230px;
+        margin: 40px;
+        line-height: 1.2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cleanstreet-logo .merk {
+        background-color: #112D5C;
+        color: #ADEA33;
+        border-radius: 10px 10px 0 0;
+        border-top: 2px solid #FFFFFF;
+        border-left: 2px solid #FFFFFF;
+        border-right: 2px solid #FFFFFF;
+    }
+    .cleanstreet-logo .merk span {
+        color: #FFFFFF;
+    }
+    .cleanstreet-logo .locatie {
+        background-color: #ADEA33;
+        color: #112D5C;
+        border-radius: 0 0 10px 10px;
+        border-bottom: 2px solid #FFFFFF;
+        border-left: 2px solid #FFFFFF;
+        border-right: 2px solid #FFFFFF;
+    }
+</style>
+<div class="cleanstreet-logo">
+    <div class="merk"><span>Clean</span> Street</div>
+    <div class="locatie locatie-flipper">Damstraat</div>
+</div>
+<script>
+    (function () {
+        /*
+         * Flip straatnamen in alle elementen met class locatie-flipper.
+         */
+        var i = 0;
+        var straatnamen = [
+            'Damstraat',
+            'Oude Doelen',
+            'Nieuwe Hoog',
+            'Oude Hoog',
+            'Damrak',
+            'Nieuwe Dijk'
+        ];
+        setInterval(function () {
+            ++i;
+            var els = document.getElementsByClassName('locatie-flipper');
+            for (var it = 0; it < els.length; ++it) {
+                els[it].innerHTML = straatnamen[i % straatnamen.length];
+            };
+        }, 1500);
+    })();
+</script>
