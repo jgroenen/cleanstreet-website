@@ -7,51 +7,119 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
+        <style>
+            form {
+                font-size: 2em;
+                text-align: center;
+                line-height: 1.4em;
+                padding-top: 20px
+            }
+            form input {
+                font-size: 1em;
+                width: 4em;
+                margin: 40px 0;
+            }
+            form button {
+                display: block;
+                padding: 0 40px;
+                background: #ADEA33;
+                border: 0;
+                border-radius: 10px;
+                font-size: 1em;
+                color: #112D5C;
+                height: 2em;
+                text-decoration: none;
+                line-height: 2em;
+                text-align: center;
+                margin: 20px auto;
+            }
+            body {
+                text-align: center;
+            }
+            a {
+                color: #fff;
+            }
+        </style>
     </head>
     <body>
         <div class="nederland-schoon-banner">
             <?php include('logo-schoon.html'); ?>
         </div>
-        <header>
-            <?php include('logo-bak.html'); ?>
-            <?php //include('logo-basis.html'); ?>
-            <?php //include('logo-soap.html'); ?>
-            <h1>Samen houden we<br><span style="color: #ADEA33">Amsterdam</span> schoon</h1>
-        </header>
         <main>
             <section>
-                <p>Het is druk in Amsterdam. Het toegenomen toerisme zorgt voor meer vuilnis in de straten. Vooral op plaatsen waar op straat wordt gegeten en gedronken. In die straten is er extra inspanning nodig om het schoon te houden. En dat gaan we dus doen!</p>
-                <p>De Gemeente Amsterdam wil dat iedereen zijn verantwoordelijkheid neemt: gemeente, bewoners, bezoekers en ondernemers. Wij denken dat goed voorbeeld doet volgen. Daarom zetten wij de eerste stap. En we vragen u als Amsterdamse ondernemer om ons daarbij te helpen.</p>
+                <form method="post">
+
+                    Bak nummer:<br>
+                    <input type="number" name="baknummer"><br>
+
+                    <button>Bak legen</button>
+
+                </form>
             </section>
             <section>
-                <h1>Dit gaan wij doen</h1>
-                <h2>Zwerfvuil oprapen</h2>
-                <p>Vuilnis gooi je gewoon in de vuilnisbak. Toch gebeurt dit niet altijd. Om dit te laten zien, beginnen wij met het oprapen van zwerfvuil en gooien we dit in de vuilnisbak.</p>
-                <h2>Zakken verwisselen</h2>
-                <p>De ondernemersbakken...</p>
-                <p>Volle vuilnisbakken zijn geen porem. Maar soms heeft u het als ondernemer even druk. Dat begrijpen we. Daarom verwisselen wij de zak voor u.</p>
-                <h2>Mensen aanspreken</h2>
-                <p>Af en toe is het goede voorbeeld geven niet genoeg. Of maakt iemand het wel erg bont. In die gevallen spreken wij die persoon aan op zijn gedrag.</p>
-                <h2>Kosten in kaart brengen</h2>
-                <p>Amsterdammers betalen voor het schoonhouden van de straten. In gebieden met veel consumerende bezoekers is het normale proces onvoldoende. Daar moet wat extra's gebeuren.</p>
-                <p>De kosten die daarmee samenhangen, gaan we duidelijk in beeld brengen. Dat maakt discussies daarover mogelijk.</p>
+                <a href="/info.php">meer info</a>
             </section>
-            <section>
-                <h1>Dit vragen we van u</h1>
-                <h2>Een schone stoep</h2>
-                <p>Een schone straat begint met een schone stoep. Wij vragen u daarom uw stoep ook zelf netjes te houden.</p>
-                <h2>Een vuilnisbak plaatsen</h2>
-                <p>Hoe meer bakken op straat, hoe minder zwerfvuil. Wij leveren u graag een bak. Doet u de bak, dan doen wij de zak.</p>
-                <p>
-                    <a class="bestellen" href="bestellen.php">BAK BESTELLEN</a>
-                </p>
-                <h2>Mensen aanspreken</h2>
-                <p>Een vriendelijk verzoek werkt vaak beter dan geboden en verboden. Wij vragen u om uw klanten te wijzen op de vuilnisbakken.</p>
-                <h2>Vuilnis melden</h2>
-                <p>Een volle bak of een berg zakken? Laat het ons direct weten.</p>
-            </section>
-            <?php include('meerinfo.html'); ?>
         </main>
-        <?php /* include('logo-schoon.html'); */ ?>
     </body>
 </html>
+<?php
+
+ini_set("error_reporting", E_ALL);
+ini_set("display_errors", 1);
+
+if ($_SERVER["REQUEST_METHOD"] !== "POST") die("voer een baknummer in");
+
+$baknummer = (int) $_POST["baknummer"];
+
+if (!$baknummer) die("voer een baknummer in");
+
+$json = file_get_contents("https://heelenschoon.datalabamsterdam.nl/ondernemersbakken/index.json");
+$bakken = json_decode($json);
+$kenmerken = array_map(function ($bak) {
+    return $bak->kenmerk;
+}, $bakken);
+$bakken = array_combine($kenmerken, $bakken);
+
+if (!array_key_exists($baknummer, $bakken)) die("onbekende bak");
+
+$bak = $bakken[$baknummer];
+
+include("private_vars.php");
+
+$adres = str_replace(" ", "+", "{$bak->onderneming->straat}+{$bak->onderneming->nummer}+Amsterdam"); //FIXME + naam onderneming?
+
+$geo = $bak->onderneming->geoPoint; //FIXME geoPoint naar (lat,lng) format
+
+if (!$geo) {
+    $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address={$adres}");
+    $r = json_decode($json);
+    $r = reset($r->results);
+    $geo = "{$r->geometry->location->lat},{$r->geometry->location->lng}";
+}
+
+$static_maps_link = "https://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=roadmap&zoom=19&markers=color:red%7C{$geo}";
+$search_link = "https://www.google.nl/maps/search/{$adres}/"; //FIXME geo?
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, [
+    "payload" => json_encode([
+        "icon_url" => "http://i.imgur.com/SsKhwxv.png",
+        "username" => "LEEG.NU",
+        "channel" => "#leegnu",
+        "attachments" => [
+            [
+                "image_url" => $static_maps_link,
+                "title" => "LEEG.NU: Bak {$bak->kenmerk} (klik voor route)",
+                "text" => "{$bak->onderneming->naam} {$bak->onderneming->straat} (Bak {$bak->kenmerk})",
+                "title_link" => $search_link 
+            ]
+        ]
+    ])
+]);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_exec($ch);
+curl_close($ch);
+
+exit("wij komen zo spoedig mogelijk");
