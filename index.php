@@ -21,7 +21,7 @@
             }
             header {
                 text-align: center;
-                margin-top: 140px;
+                margin-top: 80px;
             }
             h1 {
                 font-size: 2em;
@@ -34,6 +34,10 @@
                 font-weight: 700;
                 margin-top: 20px;
                 color: #ADEA33;
+            }
+            main {
+                max-width: 800px;
+                margin: auto;
             }
             section {
                 margin: 10px;
