@@ -6,65 +6,7 @@
         <link href="reset.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <style>
-            body {
-                font-size: 100%;
-                line-height: 1.4em;
-                background-color: #112D5C;
-                color: #FFFFFF;
-                font-family: "Open Sans";
-            }
-            .nederland-schoon-banner {
-                background-color: #ADEA33;
-                padding: 30px;
-                text-align: center;
-            }
-            header {
-                text-align: center;
-                margin-top: 80px;
-            }
-            h1 {
-                font-size: 2em;
-                line-height: 1em;
-                font-weight: 900;
-                margin: 40px 0;
-            }
-            h2 {
-                font-size: 1.4em;
-                font-weight: 700;
-                margin-top: 20px;
-                color: #ADEA33;
-            }
-            main {
-                max-width: 800px;
-                margin: auto;
-            }
-            section {
-                margin: 10px;
-            }
-            p {
-                margin-top: 10px;
-            }
-            .bestellen {
-                display: block;
-                padding: 0 40px;
-                background: #ADEA33;
-                border: 0;
-                border-radius: 10px;
-                font-size: 2em;
-                color: #112D5C;
-                height: 3em;
-                text-decoration: none;
-                line-height: 3em;
-                text-align: center;
-                margin: 20px auto;
-            }
-        </style>
-        <style>
-            @media screen and (max-width: 480px) {
-                /*void*/
-            }
-        </style>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <div class="nederland-schoon-banner">
@@ -72,8 +14,8 @@
         </div>
         <header>
             <?php include('logo-bak.html'); ?>
-            <?php include('logo-basis.html'); ?>
-            <?php include('logo-soap.html'); ?>
+            <?php //include('logo-basis.html'); ?>
+            <?php //include('logo-soap.html'); ?>
             <h1>Samen houden we<br><span style="color: #ADEA33">Amsterdam</span> schoon</h1>
         </header>
         <main>
