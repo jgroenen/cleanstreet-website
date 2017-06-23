@@ -6,6 +6,7 @@
         <link href="reset.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <style>
             body {
                 font-size: 100%;
@@ -92,7 +93,9 @@
         </style>
     </head>
     <body>
-        <?php include('banner.html'); ?>
+        <div class="nederland-schoon-banner">
+            <?php include('logo-schoon.html'); ?>
+        </div>
         <header>
             <h1>Bak bestellen</h1>
             <div class="cleanstreet-logo">
@@ -113,6 +116,5 @@
             </section>
             <?php include('meerinfo.html'); ?>
         </main>
-        <?php include('banner.html'); ?>
     </body>
 </html>

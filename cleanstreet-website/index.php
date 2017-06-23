@@ -57,7 +57,7 @@
                 </form>
             </section>
             <section>
-                <a href="/info.php">meer info</a>
+                <a href="info.php">meer info</a>
             </section>
         </main>
     </body>
