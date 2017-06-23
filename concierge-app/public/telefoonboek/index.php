@@ -34,9 +34,10 @@
                     </div>
                 </li>
             </ul>
-            <div class="acties" id="acties" style="display: none; opacity: 0.9">
+            <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                 <ul>
                     <li>+CONTACT</li>
+                    <li>annuleren</li>
                 </ul>
             </div>
             <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>

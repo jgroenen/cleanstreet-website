@@ -91,8 +91,13 @@ main {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 100%;
+}
+.acties ul {
+    position: absolute;
+    bottom: 0;
     background: #000;
-    padding-bottom: 60px;
+    width: 100%;
 }
 .acties li {
     width: 100%;
@@ -125,4 +130,13 @@ main {
 nav img {
     width: 40px;
     vertical-align: middle;
+}
+.ondernemer .bak {
+    display: inline-block;
+    background: #096;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    line-height: 0.6rem;
+    border-radius: 0.2rem;
+    color: #fff;
 }

@@ -20,6 +20,7 @@
                             <h2>WOK2GO</h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
+                            <p><span class="bak">9182</span> <span class="bak">8123</span></p>
                         </div>
                     </div>
                 </li>
@@ -42,6 +43,7 @@
                             <h2>KFC</h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
+                            <p><span class="bak">5532</span></p>
                         </div>
                     </div>
                 </li>
@@ -53,6 +55,7 @@
                             <h2>ICEBAK</h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
+                            <p><span class="bak">6412</span></p>
                         </div>
                     </div>
                 </li>
@@ -64,13 +67,15 @@
                             <h2>WONKAWORLD</h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
+                            <p><span class="bak">1323</span></p>
                         </div>
                     </div>
                 </li>
             </ul>
-            <div class="acties" id="acties" style="display: none; opacity: 0.9">
+            <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                 <ul>
                     <li>+ONDERNEMER</li>
+                    <li>annuleren</li>
                 </ul>
             </div>
             <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>
