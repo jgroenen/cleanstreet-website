@@ -4,4 +4,7 @@
 
 ## Observaties
 
-- Notities hoeven niet te worden ondersteund in INBOX, alleen onder ondernemers. Als het iets is waar opvolging aan moet worden gegeven, dan kan het als melding.
+- Meldingen zijn eigenlijk "tickets".
+- Notities zijn eigenlijk "aantekeningen" bij een ondernemer.
+- Alleen tickets moeten in INBOX.
+- Vanuit ondernemer kun je een aantekening toevoegen, of een ticket aanmaken.

@@ -24,6 +24,7 @@
                     <ul>
                         <li>+BAK</li>
                         <li>+NOTITIE</li>
+                        <li>+MELDING</li>
                         <li>WIJZIGEN</li>
                         <li>annuleren</li>
                     </ul>
