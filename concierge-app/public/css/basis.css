@@ -131,6 +131,7 @@ nav img {
     width: 40px;
     vertical-align: middle;
 }
+.item .label,
 .ondernemer .bak {
     display: inline-block;
     background: #096;
@@ -139,4 +140,15 @@ nav img {
     line-height: 0.6rem;
     border-radius: 0.2rem;
     color: #fff;
+}
+.top-link {
+    height: 2rem;
+}
+.top-link a {
+     color: #aaa;
+     line-height: 2rem;
+     margin-left: 1rem;
+}
+.ondernemer .details {
+    padding: 1rem;
 }

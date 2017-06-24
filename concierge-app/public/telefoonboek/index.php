@@ -8,7 +8,7 @@
         <?php include("../../private/html/nav.html"); ?>
         <main class="telefoonboek">
             <h1>TELEFOONBOEK</h1>
-            <div style="height: 2rem">
+            <div class="top-link">
             </div>
             <ul>
                 <!-- LOOP OVER TELEFOONBOEK ITEMS (contacten) -->
