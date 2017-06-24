@@ -20,11 +20,16 @@
                 </p>
                 <p>Jan Gerritsen</p>
                 <p><span class="bak">9182</span> <span class="bak">8123</span></p>
+                <div class="aantekening" style="margin-top: 20px; color: #aaa">
+                    (geen aantekening)
+                </div>
+                <div class="tickets" style="margin-top: 20px">
+                    <h2>Openstaande tickets: geen</h2>
+                </div>
                 <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                     <ul>
                         <li>+BAK</li>
-                        <li>+NOTITIE</li>
-                        <li>+MELDING</li>
+                        <li>+TICKET</li>
                         <li>WIJZIGEN</li>
                         <li>annuleren</li>
                     </ul>
