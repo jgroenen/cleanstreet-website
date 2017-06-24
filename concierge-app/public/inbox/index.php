@@ -17,7 +17,7 @@
                     <div class="item ticket">
                         <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
                         <div class="info">
-                            <h2>LEEG.NU</h2>
+                            <h2><a href="../ticket-2351">LEEG.NU</a></h2>
                             <span class="datum-tijd">21:38</span><br>
                             <span class="label" style="float: right">bak vol</span>
                             <p>WOK2GO (Damstraat)</p>

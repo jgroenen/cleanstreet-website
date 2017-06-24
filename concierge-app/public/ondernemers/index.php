@@ -78,7 +78,7 @@
                     <li>annuleren</li>
                 </ul>
             </div>
-            <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>
+            <div class="actie" onclick="window.location = '../ondernemer'">+</div>
         </main>
     </body>
 </html>
