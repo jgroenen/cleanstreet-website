@@ -66,6 +66,7 @@ main {
     line-height: 2rem;
     margin-right: 0.6rem;
 }
+.item .aantekening,
 .item .laatste-actie {
     color: #999;
 }

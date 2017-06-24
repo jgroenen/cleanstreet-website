@@ -31,6 +31,7 @@
                             <h2>McDonnalds</h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
+                            <p class="aantekening">→ wil geen bak</p>
                         </div>
                     </div>
                 </li>
