@@ -16,7 +16,7 @@
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/7d/0f/d4/wok2go-stockton-heath.jpg">
                         <div class="info">
                             <p style="float: right; margin: 10px"><a class="phone-button" href="tel:0612345678">📞</a></p>
-                            <h2><a href="../ondernemer">WOK2GO</a></h2>
+                            <h2><a href="../ondernemer-41231">WOK2GO</a></h2>
                             <p>Damstraat 129</p>
                             <p>Jan Gerritsen</p>
                             <p><span class="bak">9182</span> <span class="bak">8123</span></p>
@@ -74,7 +74,7 @@
             </ul>
             <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                 <ul>
-                    <li>+ONDERNEMER</li>
+                    <li><a href="../ondernemer">+ONDERNEMER</a></li>
                     <li>annuleren</li>
                 </ul>
             </div>
