@@ -7,7 +7,7 @@
         </header>
         <?php include("../../private/html/nav.html"); ?>
         <main class="ticket">
-            <h1>ONDERNEMER</h1>
+            <h1>TICKET</h1>
             <div class="top-link">
                 <a href="../inbox">« inbox</a>
             </div>
@@ -29,7 +29,7 @@
                         <li>+ONDERNEMER</li>
                         <li>+LOCATIE</li>
                         <li>+BELLEN</li>
-                        <li>SLUITEN</li>
+                        <li>TICKET SLUITEN</li>
                         <li>annuleren</li>
                     </ul>
                 </div>
