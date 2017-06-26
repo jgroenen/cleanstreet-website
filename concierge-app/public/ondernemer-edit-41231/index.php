@@ -2,14 +2,10 @@
 <html>
     <?php include('../../private/html/header.html'); ?>
     <body>
-        <header>
-            CLEAN STREET
-        </header>
-        <?php include("../../private/html/nav.html"); ?>
-        <main class="ondernemer">
+        <main class="ondernemer details">
             <h1>ONDERNEMER</h1>
             <div class="top-link">
-                <a href="../ondernemer-41231">« annuleren</a>
+                <a href="../ondernemers" class="close">✖</a>
             </div>
             <div class="details">
                 <input value="WOK2GO"></input><br>

@@ -7,7 +7,6 @@
         </header>
         <?php include("../../private/html/nav.html"); ?>
         <main class="telefoonboek">
-            <h1>TELEFOONBOEK</h1>
             <ul>
                 <!-- LOOP OVER TELEFOONBOEK ITEMS (contacten) -->
                 <li>

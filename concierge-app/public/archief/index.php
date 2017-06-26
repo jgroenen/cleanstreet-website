@@ -2,41 +2,52 @@
 <html>
     <?php include('../../private/html/header.html'); ?>
     <body>
-        <header>
-            CLEAN STREET
-        </header>
-        <?php include("../../private/html/nav.html"); ?>
-        <main class="archief">
+        <main class="archief details">
             <h1>ARCHIEF</h1>
+            <div class="top-link">
+                <a href="../inbox" class="close">✖</a>
+            </div>
             <ul>
-                <!-- LOOP OVER INBOX ITEMS (afgehandelde meldingen (eigen, leeg.nu, ...), ongevlagde notities) -->
-                <li>
-                    <div class="item melding">
-                        <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
-                        <div class="info">
-                            <h2>LEEG.NU</h2>
-                            <span class="datum-tijd">21:38</span><br>
-                            <span class="label" style="float: right; background: #aaa">bak vol</span>
-                            <p>Volle bak bij Wok 2 Go</p>
-                            <p>Damstraat 128</p>
-                            <p class="laatste-actie">→ afgehandeld <span>10:31</span></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item melding">
-                        <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
-                        <div class="info">
-                            <h2>LEEG.NU</h2>
-                            <span class="datum-tijd">21:38</span><br>
-                            <span class="label" style="float: right; background: #aaa">bak vol</span>
-                            <p>Volle bak bij Wok 2 Go</p>
-                            <p>Damstraat 128</p>
-                            <p class="laatste-actie">→ afgehandeld <span>10:31</span></p>
-                        </div>
-                    </div>
-                </li>
+<?php
+
+    $data = json_decode(file_get_contents("../../private/json/tickets.json"), true);
+    $tickets = array_filter($data["tickets"], function ($ticket) {
+        return $ticket["acties"][0]["omschrijving"] === "gesloten";
+    });
+    foreach ($tickets as $ticket) {
+    
+?>
+    <li>
+        <div class="item ticket">
+            <img src="<?= $ticket["foto"] ?>">
+            <div class="info">
+                <h2><a href="<?= $ticket["url"] ?>"><?= $ticket["categorie"] ?></a></h2>
+                <span class="datum-tijd"><?= $ticket["tijd"] ?></span><br>
+                <span class="label" style="float: right"><?= $ticket["bron"] ?></span>
+                <p><?= $ticket["ondernemer"] ?></p>
+                <p><?= $ticket["adres"] ?></p>
+                <p><?= $ticket["opmerking"] ?></p>
+                <p class="laatste-actie">→  <?= $ticket["acties"][0]["omschrijving"] ?><span><?= $ticket["acties"][0]["tijd"] ?></span></p>
+            </div>
+        </div>
+    </li>
+<?php
+
+    } // foreach
+
+?>
             </ul>
+<?php
+
+    if (!count($tickets)) {
+        
+?>
+    <p style="margin: 1rem">Geen tickets in archief.</p>
+<?php
+        
+    }
+    
+?>
         </main>
     </body>
 </html>

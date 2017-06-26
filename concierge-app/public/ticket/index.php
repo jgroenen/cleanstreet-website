@@ -8,21 +8,34 @@
                 <a href="../inbox" class="close">✖</a>
             </div>
             <div class="details">
-                <span class="datum-tijd" style="float: right">21:38</span>
-                <h2 style="font-size: 2em">EIGEN TICKET</h2>
-                <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
-                    <ul>
-                        <li>+FOTO</li>
-                        <li>+OPMERKING</li>
-                        <li>+ONDERNEMER</li>
-                        <li>+LOCATIE</li>
-                        <li>+BELLEN</li>
-                        <li>TICKET SLUITEN</li>
-                        <li>annuleren</li>
-                    </ul>
+                <div style="display: none">
+                    <input name="datum" type="text" value="<?php echo date("Y/m/d"); ?>"></input><br>
+                    <input name="tijd" type="text" value="<?php echo date("H:i:s"); ?>"></input><br>
+                    <input name="latitude" id="latitude" type="text" value=""></input><br>
+                    <input name="longitude" id="longitude" type="text" value=""></input><br>
                 </div>
+                <img style="width: 100%" id="maps" src="">
+                <br>
+                <textarea placeholder="Wat is het probleem?" autofocus></textarea>
+                <br>
+                <img src="" alt="+" style="width: 100px; height: 100px; margin: 1px solid silver">
+                <img src="" alt="+" style="width: 100px; height: 100px; margin: 1px solid silver">
+                <img src="" alt="+" style="width: 100px; height: 100px; margin: 1px solid silver">
             </div>
-            <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>
+            <a class="actie" href="../ticket-2351"><img src="../img/Icon_Check.svg"></a>
         </main>
+        <script>
+            (function () {
+                
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    document.getElementById('latitude').value = position.coords.latitude;
+                    document.getElementById('longitude').value = position.coords.longitude;
+                    document.getElementById('maps').src = "https://maps.googleapis.com/maps/api/staticmap?center="
+                        + position.coords.latitude + ","
+                        + position.coords.longitude + "&size=400x200&zoom=13";
+                });
+                
+            })();
+        </script>
     </body>
 </html>

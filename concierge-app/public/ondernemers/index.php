@@ -7,7 +7,6 @@
         </header>
         <?php include("../../private/html/nav.html"); ?>
         <main class="ondernemers">
-            <h1>ONDERNEMERS</h1>
             <ul>
                 <!-- LOOP OVER ONDERNEMERSLIJST ITEMS (ondernemers) -->
                 <li>

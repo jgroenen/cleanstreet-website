@@ -7,12 +7,14 @@
         </header>
         <?php include("../../private/html/nav.html"); ?>
         <main class="inbox">
-            <h1>INBOX</h1>
             <ul>
 <?php
 
     $data = json_decode(file_get_contents("../../private/json/tickets.json"), true);
-    foreach ($data["tickets"] as $ticket) {
+    $tickets = array_filter($data["tickets"], function ($ticket) {
+        return $ticket["acties"][0]["omschrijving"] !== "gesloten";
+    });
+    foreach ($tickets as $ticket) {
     
 ?>
     <li>

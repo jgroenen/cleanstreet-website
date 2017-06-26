@@ -27,7 +27,7 @@ nav ul {
 }
 nav li {
     display: inline-block;
-    background: #fff;
+    background: #096;
     text-align: center;
     font-size: 2em;
     flex: auto;
@@ -61,6 +61,10 @@ main {
     font-weight: 700;
     line-height: 2rem;
     display: inline-block;
+}
+.item h2 a {
+    text-decoration: none;
+    color: #096;
 }
 .item .datum-tijd {
     float: right;
@@ -145,21 +149,38 @@ nav img {
     color: #fff;
 }
 .link-section {
-    height: 2rem;
+    margin: 1rem;
 }
 .link-section a {
-     color: #aaa;
-     line-height: 2rem;
-     margin-left: 1rem;
+    color: #000;
 }
 .ondernemer .details {
     padding: 1rem;
 }
 .close {
+    display: block;
     text-decoration: none;
     font-size: 2em;
-    margin-top: 2rem;
+    margin: 1rem;
+    color: #960;
 }
 .details {
     top: 0;
+}
+textarea {
+    width: 98%;
+    height: 80px;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+svg {
+    color: black;
+}
+.details img {
+        font-size: 2em;
+    text-align: center;
+    line-height: 100px;
+    color: silver;
+    display: inline-block;
 }
