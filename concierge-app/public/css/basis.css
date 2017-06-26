@@ -184,3 +184,10 @@ svg {
     color: silver;
     display: inline-block;
 }
+.header-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

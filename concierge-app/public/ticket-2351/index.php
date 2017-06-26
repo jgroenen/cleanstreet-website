@@ -8,15 +8,15 @@
                 <a href="../inbox" class="close">✖</a>
             </div>
             <div class="details">
-                <span class="datum-tijd" style="float: right">21:38</span>
-                <h2 style="font-size: 2em">LEEG.NU</h2>
+                <div class="header-image" style="background-image: url(http://cdn.sleutelstad.nl/wp-content/uploads/2016/06/grofvuil.jpg)"></div>
+                <img src="http://careace.net/wp-content/uploads/2010/09/map-google.gif" style="width: 100px; height: 100px; margin: -80px 0 0 20px; border-bottom: 2px solid #aaa">
                 <p>WOK2GO (Damstraat)</p>
-                <img src="http://careace.net/wp-content/uploads/2010/09/map-google.gif" style="width: 100%; height: 200px">
                 <div class="opmerking" style="margin-top: 20px">
                     AUTOMATISCH MELDING LEEG.NU: Bak vol
                 </div>
                 <div class="updates" style="margin-top: 20px">
-                    <h2>Updates: geen</h2>
+                    <h2>Updates</h2>
+                    <div>aangemaakt <span class="datum-tijd">10:31</span></div>
                 </div>
                 <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                     <ul>
