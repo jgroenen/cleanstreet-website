@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
-        <header>
-            CLEAN STREET
-        </header>
+        <?php include('../../private/html/header.html'); ?>
         <?php include("../../private/html/nav.html"); ?>
         <main class="ondernemers">
             <ul>

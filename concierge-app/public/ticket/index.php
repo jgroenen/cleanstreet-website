@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="ticket details">
             <h1>TICKET</h1>
@@ -32,7 +32,7 @@
                     document.getElementById('longitude').value = position.coords.longitude;
                     document.getElementById('maps').src = "https://maps.googleapis.com/maps/api/staticmap?center="
                         + position.coords.latitude + ","
-                        + position.coords.longitude + "&size=400x200&zoom=13";
+                        + position.coords.longitude + "&size=400x200&zoom=19";
                 });
                 
             })();

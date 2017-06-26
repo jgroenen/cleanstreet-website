@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
-        <header>
-            CLEAN STREET
-        </header>
+        <?php include('../../private/html/header.html'); ?>
         <?php include("../../private/html/nav.html"); ?>
         <main class="inbox">
             <ul>
@@ -19,7 +17,9 @@
 ?>
     <li>
         <div class="item ticket">
-            <img src="<?= $ticket["foto"] ?>">
+            <a href="<?= $ticket["foto"] ?>">
+                <img src="<?= $ticket["foto"] ?>">
+            </a>
             <div class="info">
                 <h2><a href="<?= $ticket["url"] ?>"><?= $ticket["categorie"] ?></a></h2>
                 <span class="datum-tijd"><?= $ticket["tijd"] ?></span><br>

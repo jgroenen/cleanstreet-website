@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="ticket details">
             <h1>TICKET</h1>
@@ -8,8 +8,24 @@
                 <a href="../inbox" class="close">✖</a>
             </div>
             <div class="details">
-                <div class="header-image" style="background-image: url(http://cdn.sleutelstad.nl/wp-content/uploads/2016/06/grofvuil.jpg)"></div>
-                <img src="http://careace.net/wp-content/uploads/2010/09/map-google.gif" style="width: 100px; height: 100px; margin: -80px 0 0 20px; border-bottom: 2px solid #aaa">
+<?php if (mt_rand() % 2) { ?>
+                <a href="http://cdn.sleutelstad.nl/wp-content/uploads/2016/06/grofvuil.jpg">
+                    <div class="header-image" style="background-image: url(http://cdn.sleutelstad.nl/wp-content/uploads/2016/06/grofvuil.jpg)"></div>
+                </a>
+                <a href="http://careace.net/wp-content/uploads/2010/09/map-google.gif">
+                    <img src="http://careace.net/wp-content/uploads/2010/09/map-google.gif" style="width: 100px; height: 100px; margin: -80px 0 0 20px; border-bottom: 2px solid #aaa">
+                </a>
+                <h2>GROFVUIL</h2>
+<?php } else { ?>
+                <a href="http://careace.net/wp-content/uploads/2010/09/map-google.gif">
+                    <div class="header-image" style="background-image: url(http://careace.net/wp-content/uploads/2010/09/map-google.gif)"></div>
+                </a>
+                <a href="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
+                    <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png" style="width: 100px; height: 100px; margin: -80px 0 0 20px; border-bottom: 2px solid #aaa">
+                </a>
+                <h2>VOLLE BAK</h2>
+<?php } ?>
+                
                 <p>WOK2GO (Damstraat)</p>
                 <div class="opmerking" style="margin-top: 20px">
                     AUTOMATISCH MELDING LEEG.NU: Bak vol

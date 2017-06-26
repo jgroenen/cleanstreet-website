@@ -21,7 +21,7 @@
         },
         {
           "tijd": "10:31",
-          "omschrijving": "melding ontvangen"
+          "omschrijving": "ontvangen"
         }
       ]
     },
@@ -39,6 +39,10 @@
         {
           "tijd": "10:31",
           "omschrijving": "Hilde gebeld"
+        },
+        {
+          "tijd": "10:31",
+          "omschrijving": "aangemaakt"
         }
       ]
     },
@@ -56,6 +60,10 @@
         {
           "tijd": "10:31",
           "omschrijving": "handhaving gebeld"
+        },
+        {
+          "tijd": "10:31",
+          "omschrijving": "aangemaakt"
         }
       ]
     },
@@ -73,6 +81,10 @@
         {
           "tijd": "10:31",
           "omschrijving": "afspraak gemaakt"
+        },
+        {
+          "tijd": "10:31",
+          "omschrijving": "aangemaakt"
         }
       ]
     },
@@ -94,6 +106,10 @@
         {
           "tijd": "10:31",
           "omschrijving": "handhaving gebeld"
+        },
+        {
+          "tijd": "10:31",
+          "omschrijving": "aangemaakt"
         }
       ]
     }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="archief details">
             <h1>ARCHIEF</h1>

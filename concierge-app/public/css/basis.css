@@ -6,11 +6,16 @@ header {
     background: #096;
     font-size: 1.4em;
     line-height: 2rem;
-    text-align: center;
+    /*text-align: center;*/
     color: #fff;
     position: fixed;
     width: 100%;
     z-index: 1;
+    height: 4rem;
+}
+header img {
+    margin: 0.8rem 1rem;
+    height: 2rem;
 }
 p {
     line-height: 1.4em;
@@ -18,7 +23,7 @@ p {
 nav {
     width: 100%;
     position: fixed;
-    top: 2rem;
+    top: 3rem;
     z-index: 1;
     border-bottom: 1px solid #096;
 }
@@ -59,7 +64,7 @@ main {
 .item h2 {
     font-size: 1.2em;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 3rem;
     display: inline-block;
 }
 .item h2 a {
@@ -129,7 +134,7 @@ main h1 {
     font-size: 1.4em;
     background: #aaa;
     color: #fff;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 main {
     margin-bottom: 8rem;
@@ -190,4 +195,39 @@ svg {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.switch-button {
+    display: flex;
+    margin: 0.5rem 1rem;
+}
+.switch-button div {
+    flex: 2;
+    width: 3.3rem;
+    height: 2.2rem;
+    background: #eee;
+    color: #333;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
+.switch-button .left {
+    border-left: 0.3rem solid #aaa;
+}
+.switch-button .right {
+    border-right: 0.3rem solid #aaa;
+    font-size: 0.8rem;
+}
+.switch-button .active {
+    width: 3.4rem;
+    border: 0;
+    background: #fff;
+}
+.switch-button .left.active {
+    color: green;
+    text-shadow: 0 0 2px green;
+}
+.switch-button .right.active {
+    color: red;
+    text-shadow: 0 0 2px red;
 }

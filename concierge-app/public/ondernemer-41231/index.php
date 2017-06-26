@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <?php include('../../private/html/header.html'); ?>
+    <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="ondernemer details">
             <h1>ONDERNEMER</h1>
