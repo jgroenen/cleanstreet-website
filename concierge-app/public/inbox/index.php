@@ -8,79 +8,37 @@
         <?php include("../../private/html/nav.html"); ?>
         <main class="inbox">
             <h1>INBOX</h1>
-            <div class="top-link">
+            <ul>
+<?php
+
+    $data = json_decode(file_get_contents("../../private/json/tickets.json"), true);
+    foreach ($data["tickets"] as $ticket) {
+    
+?>
+    <li>
+        <div class="item ticket">
+            <img src="<?= $ticket["foto"] ?>">
+            <div class="info">
+                <h2><a href="<?= $ticket["url"] ?>"><?= $ticket["categorie"] ?></a></h2>
+                <span class="datum-tijd"><?= $ticket["tijd"] ?></span><br>
+                <span class="label" style="float: right"><?= $ticket["bron"] ?></span>
+                <p><?= $ticket["ondernemer"] ?></p>
+                <p><?= $ticket["adres"] ?></p>
+                <p><?= $ticket["opmerking"] ?></p>
+                <p class="laatste-actie">→  <?= $ticket["acties"][0]["omschrijving"] ?><span><?= $ticket["acties"][0]["tijd"] ?></span></p>
+            </div>
+        </div>
+    </li>
+<?php
+
+    } // foreach
+
+?>
+            </ul>
+            <div class="link-section">
                 <a href="../archief">« archief bekijken</a>
             </div>
-            <ul>
-                <!-- LOOP OVER INBOX ITEMS (niet afgehandelde tickets) -->
-                <li>
-                    <div class="item ticket">
-                        <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
-                        <div class="info">
-                            <h2><a href="../ticket-2351">LEEG.NU</a></h2>
-                            <span class="datum-tijd">21:38</span><br>
-                            <span class="label" style="float: right">bak vol</span>
-                            <p>WOK2GO (Damstraat)</p>
-                            <p>Damstraat 128</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item ticket">
-                        <img src="http://orig07.deviantart.net/91df/f/2008/076/4/9/notepad_by_freestock.jpg">
-                        <div class="info">
-                            <h2>EIGEN TICKET</h2><br>
-                            <span class="label" style="float: right">vraag</span>
-                            <p>WOK2GO (Damstraat)</p>
-                            <p>ophaaltijden grofvuil onduidelijk</p>
-                            <p class="laatste-actie">→ Hilde gebeld <span>10:31</span></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item ticket">
-                        <img src="http://cdn.sleutelstad.nl/wp-content/uploads/2016/06/grofvuil.jpg">
-                        <div class="info">
-                            <h2>EIGEN TICKET</h2>
-                            <span class="datum-tijd">21:38</span><br>
-                            <span class="label" style="float: right">grofvuil</span>
-                            <p>Damstraat</p>
-                            <p class="laatste-actie">→ handhaving gebeld <span>10:31</span></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item ticket">
-                        <img src="https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png">
-                        <div class="info">
-                            <h2>LEEG.NU</h2>
-                            <span class="datum-tijd">21:38</span><br>
-                            <span class="label" style="float: right">bak vol</span>
-                            <p>EASY (Damstraat)</p>
-                            <p>Damstraat 82</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="item ticket">
-                        <img src="http://orig07.deviantart.net/91df/f/2008/076/4/9/notepad_by_freestock.jpg">
-                        <div class="info">
-                            <h2>EIGEN TICKET</h2><br>
-                            <span class="label" style="float: right">aanvraag</span>
-                            <p>WAKKIEWOK (Damstraat)</p>
-                            <p>wil een bak</p>
-                            <p class="laatste-actie">→ afleverafspraak woensdag 3 april 9:00 <span>9/4/17 10:31</span></p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
-                <ul>
-                    <li>+TICKET</li>
-                    <li>annuleren</li>
-                </ul>
-            </div>
-            <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>
+            <a href="../ticket" class="actie">+</a>
         </main>
     </body>
 </html>

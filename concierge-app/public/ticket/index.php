@@ -9,15 +9,7 @@
             </div>
             <div class="details">
                 <span class="datum-tijd" style="float: right">21:38</span>
-                <h2 style="font-size: 2em">LEEG.NU</h2>
-                <p>WOK2GO (Damstraat)</p>
-                <img src="http://careace.net/wp-content/uploads/2010/09/map-google.gif" style="width: 100%; height: 200px">
-                <div class="opmerking" style="margin-top: 20px">
-                    AUTOMATISCH MELDING LEEG.NU: Bak vol
-                </div>
-                <div class="updates" style="margin-top: 20px">
-                    <h2>Updates: geen</h2>
-                </div>
+                <h2 style="font-size: 2em">EIGEN TICKET</h2>
                 <div class="acties" id="acties" style="display: none" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">
                     <ul>
                         <li>+FOTO</li>

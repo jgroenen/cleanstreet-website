@@ -8,7 +8,6 @@
         <?php include("../../private/html/nav.html"); ?>
         <main class="ondernemers">
             <h1>ONDERNEMERS</h1>
-            <div class="top-link"></div>
             <ul>
                 <!-- LOOP OVER ONDERNEMERSLIJST ITEMS (ondernemers) -->
                 <li>
