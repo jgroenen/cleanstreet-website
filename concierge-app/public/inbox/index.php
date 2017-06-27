@@ -34,7 +34,8 @@
                 <p class="laatste-actie">→  <?= $ticket["acties"][0]["omschrijving"] ?><span><?= $ticket["acties"][0]["tijd"] ?></span></p>
             </div>
             <div>
-                <span class="label"><?= $ticket["bron"] ?></span><br>
+                <!-- LABEL KLEUREN REGISTREREN? -->
+                <span class="label" <?= $ticket["bron"] === "LEEG.NU" ? "style='background: #ffcc24; color: #000'" : "" ?>><?= $ticket["bron"] ?></span><br>
                 <span class="datum-tijd"><?= $ticket["tijd"] ?></span>
             </div>
         </div>
