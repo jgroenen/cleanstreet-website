@@ -13,7 +13,7 @@
                 <input value="0612345678"></input><br>
                 <input value="Jan Gerritsen"></input><br>
                 <textarea placeholder="geen aantekening"></textarea><br>
-                <button onclick="window.location = '../ondernemer-41231'">Opslaan</button>
+                <button onclick="window.location = '../ondernemer/1'">Opslaan</button>
             </div>
         </main>
     </body>

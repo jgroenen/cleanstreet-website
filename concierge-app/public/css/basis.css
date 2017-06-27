@@ -172,13 +172,6 @@ nav img {
 .details {
     top: 0;
 }
-textarea {
-    width: 98%;
-    height: 80px;
-    border: 0;
-    border-bottom: 1px solid black;
-    margin: auto;
-}
 svg {
     color: black;
 }

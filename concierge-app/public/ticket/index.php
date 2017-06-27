@@ -16,7 +16,7 @@
     <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="ticket details">
-            <h1>TICKET</h1>
+            <h1><?=$ticket["acties"][0]["omschrijving"] === "gesloten" ? "GESLOTEN" : "OPEN"?> TICKET</h1>
             <div class="top-link">
 <?php if ($ticket["acties"][0]["omschrijving"] === "gesloten") { ?>
                 <a href="../archief" class="close">✖</a>

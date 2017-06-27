@@ -3,7 +3,7 @@
     <?php include('../../private/html/head.html'); ?>
     <body>
         <main class="archief details">
-            <h1>ARCHIEF</h1>
+            <h1>TICKET ARCHIEF</h1>
             <div class="top-link">
                 <a href="../inbox" class="close">✖</a>
             </div>
