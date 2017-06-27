@@ -51,15 +51,15 @@
                     }
                 </style>
                 <textarea placeholder="Wat is het probleem?"></textarea>
-                <div class="input"><img src="../img/Icon_Opmerking.svg">Selecteer het soort overlast</div>
-                <div class="input"><img src="../img/Icon_Ondernemers.svg">Selecteer een ondernemer</div>
-                <div class="input" onclick="position(this)"><img src="../img/Icon_Locatie.svg">Selecteer een locatie</div>
-                <div class="input"><img src="../img/Icon_Foto.svg">Neem een foto</div>
+                <div class="input" onclick="alert('popover categorie select/add')"><img src="../img/Icon_Opmerking.svg">Selecteer het soort overlast</div>
+                <div class="input" onclick="alert('popover ondernemer zoek/filter/select')"><img src="../img/Icon_Ondernemers.svg">Selecteer een ondernemer</div>
+                <div class="input" onclick="locatie(this)"><img src="../img/Icon_Locatie.svg">Selecteer een locatie</div>
+                <div class="input" onclick="alert('camera + image preview')"><img src="../img/Icon_Foto.svg">Neem een foto</div>
             </div>
             <a class="actie" href="../ticket/1"><img src="../img/Icon_Check.svg"></a>
         </main>
         <script>
-            function position(el) {
+            function locatie(el) {
                 navigator.geolocation.getCurrentPosition(function (position) {
                     document.getElementById('latitude').value = position.coords.latitude;
                     document.getElementById('longitude').value = position.coords.longitude;
@@ -67,7 +67,11 @@
                         + position.coords.latitude + ","
                         + position.coords.longitude + "&size=400x200&zoom=19";
                     el.classList.add("maps");
-                    el.innerHTML = "<img class='maps' src='" + maps + "'>";
+                    el.innerHTML = "<img \
+                        class='maps'\
+                        src='" + maps + "'\
+                        onclick=\"alert(\'popover location picker\')\"\
+                    >";
                 });
             }
         </script>
