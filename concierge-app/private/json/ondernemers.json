@@ -1,0 +1,46 @@
+{
+  "ondernemers": {
+    "1": {
+      "id": "1",
+      "foto": "https://media-cdn.tripadvisor.com/media/photo-s/0d/7d/0f/d4/wok2go-stockton-heath.jpg",
+      "url": "../ondernemer/1",
+      "avatar": "https://media-cdn.tripadvisor.com/media/photo-s/0d/7d/0f/d4/wok2go-stockton-heath.jpg",
+      "naam": "WOK2GO (Damstraat)",
+      "adres": "Damstraat 129",
+      "opmerking": "",
+      "latitude": "52.1312",
+      "longitude": "4.311",
+      "telefoon": "0634123112",
+      "contact": "Jan Gerritsen",
+      "bakken": [
+        {
+          "nummer": 9182
+        },
+        {
+          "nummer": 8123
+        }
+      ]
+    },
+    "2": {
+      "id": "2",
+      "foto": "https://media-cdn.tripadvisor.com/media/photo-s/0d/7d/0f/d4/wok2go-stockton-heath.jpg",
+      "url": "../ondernemer/2",
+      "avatar": "https://media-cdn.tripadvisor.com/media/photo-s/0d/7d/0f/d4/wok2go-stockton-heath.jpg",
+      "naam": "McDonalds (Damstraat)",
+      "adres": "Damstraat 129",
+      "opmerking": "",
+      "latitude": "52.1312",
+      "longitude": "4.311",
+      "telefoon": "0634123112",
+      "contact": "Jan Gerritsen",
+      "bakken": [
+        {
+          "nummer": 9182
+        },
+        {
+          "nummer": 8123
+        }
+      ]
+    }
+  }
+}

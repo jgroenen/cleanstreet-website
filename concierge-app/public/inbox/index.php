@@ -17,21 +17,25 @@
 ?>
     <li>
         <div class="item ticket">
+            <div>
 <?php if ($ticket["foto"]) { ?>
-            <a href="<?= $ticket["foto"] ?>">
-                <img src="<?= $ticket["foto"] ?>">
-            </a>
+                <a href="<?= $ticket["foto"] ?>">
+                    <img src="<?= $ticket["foto"] ?>">
+                </a>
 <?php } else { ?>
             <img src="<?= $ticket["avatar"] ?>">
 <?php } ?>
+            </div>
             <div class="info">
                 <h2><a href="<?= $ticket["url"] ?>"><?= $ticket["categorie"] ?></a></h2>
-                <span class="datum-tijd"><?= $ticket["tijd"] ?></span><br>
-                <span class="label" style="float: right"><?= $ticket["bron"] ?></span>
-                <p><?= $ticket["ondernemer"] ?></p>
+                <h3><?= $ticket["ondernemer"] ?></h3>
                 <p><?= $ticket["adres"] ?></p>
                 <p><?= $ticket["opmerking"] ?></p>
                 <p class="laatste-actie">→  <?= $ticket["acties"][0]["omschrijving"] ?><span><?= $ticket["acties"][0]["tijd"] ?></span></p>
+            </div>
+            <div>
+                <span class="label"><?= $ticket["bron"] ?></span><br>
+                <span class="datum-tijd"><?= $ticket["tijd"] ?></span>
             </div>
         </div>
     </li>

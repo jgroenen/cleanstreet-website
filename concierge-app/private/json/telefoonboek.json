@@ -1,0 +1,24 @@
+{
+  "telefoonboek": {
+    "1": {
+      "id": "1",
+      "foto": "http://oogopnederland.nl/wijkbijduurstede/wp-content/uploads/sites/26/2014/12/007-copy3.jpg",
+      "url": "../contact/1",
+      "avatar": "http://oogopnederland.nl/wijkbijduurstede/wp-content/uploads/sites/26/2014/12/007-copy3.jpg",
+      "naam": "Grofvuil",
+      "opmerking": "woensdag 10 uur tot 11 uur",
+      "telefoon": "0634123112",
+      "contact": "Jan Petersen"
+    },
+    "2": {
+      "id": "1",
+      "foto": "http://oogopnederland.nl/wijkbijduurstede/wp-content/uploads/sites/26/2014/12/007-copy3.jpg",
+      "url": "../contact/1",
+      "avatar": "http://oogopnederland.nl/wijkbijduurstede/wp-content/uploads/sites/26/2014/12/007-copy3.jpg",
+      "naam": "Grofvuil",
+      "opmerking": "woensdag 10 uur tot 11 uur",
+      "telefoon": "0634123112",
+      "contact": "Jan Petersen"
+    }
+  }
+}
