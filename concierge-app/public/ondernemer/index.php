@@ -26,12 +26,12 @@
                     <ul>
                         <li>+BAK</li>
                         <li>+TICKET</li>
-                        <li><a href="../ondernemer-edit-41231">WIJZIGEN</a></li>
+                        <li><a href="../ondernemer-edit/1">WIJZIGEN</a></li>
                         <li>annuleren</li>
                     </ul>
                 </div>
             </div>
-            <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">+</div>
+            <div class="actie" onclick="var el = document.getElementById('acties'); el.style.display = el.style.display === 'none' ? 'block' : 'none';">≡</div>
         </main>
     </body>
 </html>

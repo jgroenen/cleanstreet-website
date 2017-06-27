@@ -44,7 +44,7 @@
             <div class="link-section">
                 <a href="../archief">« archief bekijken</a>
             </div>
-            <a href="../ticket" class="actie">+</a>
+            <a href="../ticket-add" class="actie">+</a>
         </main>
     </body>
 </html>

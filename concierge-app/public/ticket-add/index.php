@@ -22,7 +22,7 @@
                 <img src="" alt="+" style="width: 100px; height: 100px; margin: 1px solid silver">
                 <img src="" alt="+" style="width: 100px; height: 100px; margin: 1px solid silver">
             </div>
-            <a class="actie" href="../ticket-2351"><img src="../img/Icon_Check.svg"></a>
+            <a class="actie" href="../ticket/1"><img src="../img/Icon_Check.svg"></a>
         </main>
         <script>
             (function () {

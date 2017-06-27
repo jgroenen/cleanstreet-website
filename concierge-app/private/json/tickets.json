@@ -16,6 +16,11 @@
       "longitude": "4.311",
       "acties": [
         {
+          "tijd": "10:38",
+          "omschrijving": "foto toegevoegd",
+          "foto": "http://static1.hln.be/static/photo/2010/9/8/7/20101117171415/media_xl_3946252.jpg"
+        },
+        {
           "tijd": "10:35",
           "omschrijving": "heropend"
         },
@@ -25,7 +30,7 @@
         },
         {
           "tijd": "10:31",
-          "omschrijving": "ontvangen"
+          "omschrijving": "ontvangen van LEEG.NU"
         }
       ]
     },
