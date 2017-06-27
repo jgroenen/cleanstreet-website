@@ -2,15 +2,18 @@
   "tickets": {
     "1": {
       "id": "1",
-      "foto": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
+      "foto": "",
       "url": "../ticket/1",
       "categorie": "BAK VOL",
       "datum": "",
       "tijd": "21:31",
       "bron": "LEEG.NU",
+      "avatar": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
       "ondernemer": "WOK2GO (Damstraat)",
       "adres": "Damstraat 129",
       "opmerking": "",
+      "latitude": "52.1312",
+      "longitude": "4.311",
       "acties": [
         {
           "tijd": "10:35",
@@ -28,15 +31,18 @@
     },
     "2": {
       "id": "2",
-      "foto": "http://orig07.deviantart.net/91df/f/2008/076/4/9/notepad_by_freestock.jpg",
+      "foto": "",
       "url": "../ticket/2",
       "categorie": "VRAAG",
       "datum": "",
       "tijd": "21:04",
       "bron": "concierge",
+      "avatar": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
       "ondernemer": "WOK2GO (Damstraat)",
       "adres": "Damstraat 129",
       "opmerking": "ophaaltijden grofvuil onduidelijk",
+      "latitude": "52.1312",
+      "longitude": "4.311",
       "acties": [
         {
           "tijd": "10:31",
@@ -56,9 +62,12 @@
       "datum": "",
       "tijd": "21:04",
       "bron": "concierge",
+      "avatar": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
       "ondernemer": "WOK2GO (Damstraat)",
       "adres": "Damstraat 129",
       "opmerking": "berg grofvuil op straat",
+      "latitude": "52.1312",
+      "longitude": "4.311",
       "acties": [
         {
           "tijd": "10:31",
@@ -72,15 +81,18 @@
     },
     "4": {
       "id": "4",
-      "foto": "http://orig07.deviantart.net/91df/f/2008/076/4/9/notepad_by_freestock.jpg",
+      "foto": "",
       "url": "../ticket/4",
       "categorie": "AANVRAAG",
       "datum": "",
       "tijd": "21:04",
       "bron": "concierge",
+      "avatar": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
       "ondernemer": "WOKKIEWOK (Damstraat)",
       "adres": "Damstraat 131",
       "opmerking": "wil een bak",
+      "latitude": "52.1312",
+      "longitude": "4.311",
       "acties": [
         {
           "tijd": "10:31",
@@ -100,9 +112,12 @@
       "datum": "",
       "tijd": "21:04",
       "bron": "concierge",
+      "avatar": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2017-05-30/190042693285_48.png",
       "ondernemer": "WOK2GO (Damstraat)",
       "adres": "Damstraat 129",
       "opmerking": "berg grofvuil op straat",
+      "latitude": "52.1312",
+      "longitude": "4.311",
       "acties": [
         {
           "tijd": "10:31",

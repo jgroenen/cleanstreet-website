@@ -19,7 +19,13 @@
 ?>
     <li>
         <div class="item ticket">
-            <img src="<?= $ticket["foto"] ?>">
+<?php if ($ticket["foto"]) { ?>
+            <a href="<?= $ticket["foto"] ?>">
+                <img src="<?= $ticket["foto"] ?>">
+            </a>
+<?php } else { ?>
+            <img src="<?= $ticket["avatar"] ?>">
+<?php } ?>
             <div class="info">
                 <h2><a href="<?= $ticket["url"] ?>"><?= $ticket["categorie"] ?></a></h2>
                 <span class="datum-tijd"><?= $ticket["tijd"] ?></span><br>
